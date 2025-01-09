@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(206, 119, 187);
+    color: white;
+    width: 20rem;
+    height: 500px;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.content {
+    margin-top: 60px;
+    display: block;
+    text-align: center;
+
+}
+
+.content_score {
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.content_mess {
+    margin-bottom: 10px;
+}
+
+.content_secretNumber {
+    display: block;
+    background-color: #222;
+    color: rgb(250, 249, 249);
+    border-radius: 10px;
+    padding: 14px;
+    width: 15rem;
+    margin: 0 auto;
+    font-size: 30px;
+
+
+}
+
+.input_number {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #222;
+    color: white;
+    width: 15rem;
+}
+
+.content_input-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+
+}
+
+.btn_check,
+.btn_again {
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    padding: 10px 35px;
+}
