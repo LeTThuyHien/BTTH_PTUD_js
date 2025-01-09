@@ -5,7 +5,6 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.btn_again').addEventListener('click', function () {
     score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
-
     document.querySelector('.content_mess').textContent = 'Số dự đoán là...';
     document.querySelector('.content_secretNumber').textContent = '?';
     document.querySelector('.content_score').textContent = `Điểm: ${score}`;
