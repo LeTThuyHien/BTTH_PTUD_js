@@ -63,9 +63,6 @@ let John = {
         this.BMI = (this.mass / this.height ** 2).toFixed(1);
     }
 }
-// function calcBMI(person){
-//     return person.mass / person.height ** 2;
-// }
 Mark.calcBMI();
 John.calcBMI();
 if (Mark.BMI > John.BMI) {
@@ -77,6 +74,3 @@ else if (John.BMI > Mark.BMI) {
 else {
     console.log(`BMI của ${Mark.fullname} (${Mark.BMI}) và ${John.fullname} (${John.BMI}) bằng nhau`);
 }
-
-
-
