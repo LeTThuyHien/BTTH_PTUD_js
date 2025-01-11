@@ -28,6 +28,28 @@
             </div>
         </div>
     </div>
+    <div class="DataStructuresCoding4">
+        <h3>Chuyển underscore_case sang kiểu camelCase.</h3>
+        <textarea id="input" placeholder="Nhập dữ liệu muốn chuyển đổi..." style="width: 200px; height: 70px"></textarea>
+        <div><button id="print">Chuyển đổi</button></div>
+    </div>
+    <script>
+        console.log("Coding Challenge 4");
+        // Chuyển underscore_case sang kiểu camelCase.
+        document.getElementById('print').addEventListener('click', function() {
+            const input = document.getElementById('input').value;
+            const lines = input.split('\n');
+            lines.forEach((line,i) =>{
+                const words = line.trim().split('_');
+                let output = words[0].toLowerCase();
+                for (let i = 1; i < words.length; i++) {
+                    output += words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
+                }
+                console.log(`${output.padEnd(20)}${'✅'.repeat(i+1)}`);
+
+            })
+        });
+    </script>
 
 
 

@@ -100,3 +100,4 @@ for (const [minute, event] of gameEvents) {
     const half = minute <= 45 ? 'FIRST' : 'SECOND';
     console.log(`[${half} HALF] ${minute}: ${event}`);
 }
+ 
