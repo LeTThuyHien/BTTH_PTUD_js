@@ -12,7 +12,7 @@ console.log('Đội 1 và 3 cầu thủ dự bị ', players1Final);
 const games = {
     team1: 'Bayern Munich',
     team2: 'Borussia Dortmund',
-    players: [...players1,...players2],
+    players: [...players1, ...players2],
     score: '4:0',
     scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
     odds: {
@@ -22,7 +22,7 @@ const games = {
     }
 
 }
-console.log("Tất cả người chơi của cả hai đội",games.players);
+console.log("Tất cả người chơi của cả hai đội", games.players);
 const { team1, draw, team2 } = games.odds;
 console.log(`Tỉ lệ cược team1, draw, team2 lần lượt là: ${team1}, ${draw}, ${team2} `);
 function printGoals(...players) {
@@ -33,14 +33,14 @@ function printGoals(...players) {
 }
 printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 
-const lowestOddsTeam = Object.entries(games.odds).reduce((min, current) => 
+const lowestOddsTeam = Object.entries(games.odds).reduce((min, current) =>
     min[1] < current[1] ? min : current
 );
 
 console.log(`Đội có tỉ lệ cược thấp nhất: ${lowestOddsTeam[0]} với giá trị: ${lowestOddsTeam[1]}`);
 
 console.log("Coding Challenge #2");
-var goal = games.scored.forEach(function (player,i){
+var goal = games.scored.forEach(function (player, i) {
     console.log(`Bàn thắng ${i + 1}: ${player}`);
 })
 
@@ -58,7 +58,7 @@ for (const odd of odds) {
     sum += odd;
 }
 average = sum / odds.length;
-console.log("Trung bình các odds",average.toFixed(2));
+console.log("Trung bình các odds", average.toFixed(2));
 
 
 // In các odds theo định dạng yêu cầu
@@ -72,4 +72,31 @@ for (const player of games.scored) {
 }
 console.log(scorers);
 
+console.log("Coding challenge #3")
+const gameEvents = new Map([
+    [17, 'GOAL'],
+    [36, 'Substitution'],
+    [47, 'GOAL'],
+    [61, 'Substitution'],
+    [64, 'Yellow card'],
+    [69, 'Red card'],
+    [70, 'Substitution'],
+    [72, 'Substitution'],
+    [76, 'GOAL'],
+    [80, 'GOAL'],
+    [92, 'Yellow card'],
+]);
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+gameEvents.delete(64);
+console.log(gameEvents);
 
+const totalMinutes = 90;
+const totalEvents = gameEvents.size;
+const averageInterval = totalMinutes / totalEvents;
+console.log(`Một sự kiên xảy ra, trung bình cứ ${averageInterval} phút một lần`);
+
+for (const [minute, event] of gameEvents) {
+    const half = minute <= 45 ? 'FIRST' : 'SECOND';
+    console.log(`[${half} HALF] ${minute}: ${event}`);
+}
