@@ -5,6 +5,7 @@ import Name from './components/Name';
 import Calculator from './components/Calculator';
 import SumCalculator from './components/SumCalcutor';
 import TodoList from './components/TodoList';
+import TabContent from './components/TabContent';
 function App() {
 
 
@@ -25,6 +26,10 @@ function App() {
       <div>--------------------------------------</div>
       <div className="App">
         <TodoList />
+      </div>
+      <div>--------------------------------------</div>
+      <div className="App">
+        <TabContent />
       </div>
 
     </>
