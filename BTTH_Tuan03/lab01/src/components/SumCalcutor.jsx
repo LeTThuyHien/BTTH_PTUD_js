@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./SumCalculator.css";
 
 const SumCalculator = () => {
   const [num1, setNum1] = useState('');
@@ -21,21 +22,23 @@ const SumCalculator = () => {
     <div>
       <h2>Tính tổng hai số</h2>
       <div>
-      <input
-        type="number"
-        value={num1}
-        onChange={(e) => setNum1(e.target.value)}
-        placeholder="Nhập số thứ nhất"
-      />
-      <input
-        type="number"
-        value={num2}
-        onChange={(e) => setNum2(e.target.value)}
-        placeholder="Nhập số thứ hai"
-      />
+        <input
+          type="number"
+          value={num1}
+          onChange={(e) => setNum1(e.target.value)}
+          placeholder="Nhập số thứ nhất"
+        />
+        <input
+          type="number"
+          value={num2}
+          onChange={(e) => setNum2(e.target.value)}
+          placeholder="Nhập số thứ hai"
+        />
+      </div >
+      <div className='btn_sumCalculator' >
+        <button  onClick={calculateSum}>Tính tổng</button>
       </div>
-      
-      <button onClick={calculateSum}>Tính tổng</button>
+
       <div>
         <strong>Kết quả: </strong> {sum}
       </div>

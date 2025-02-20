@@ -93,8 +93,8 @@ const Calculator = () => {
       </div>
 
 
-      <div >
-        <button onClick={handleCalculation}>Tính toán</button>
+      <div className="btn_calculator" >
+        <button  onClick={handleCalculation}>Tính toán</button>
       </div>
 
       <div >

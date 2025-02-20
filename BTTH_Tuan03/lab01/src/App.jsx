@@ -4,6 +4,7 @@ import './App.css'
 import Name from './components/Name';
 import Calculator from './components/Calculator';
 import SumCalculator from './components/SumCalcutor';
+import TodoList from './components/TodoList';
 function App() {
 
 
@@ -20,6 +21,10 @@ function App() {
       <div>--------------------------------------</div>
       <div className="App">
         <SumCalculator />
+      </div>
+      <div>--------------------------------------</div>
+      <div className="App">
+        <TodoList />
       </div>
 
     </>

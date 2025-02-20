@@ -31,8 +31,8 @@ import './Name.css';
                     disabled={disabled !== ''}
                 />
                 <div>
-                    <button onClick={handleClick}>Click</button>
-                    <button onClick={handleReset}>Reset</button>
+                    <button className='btn_click' onClick={handleClick}>Click</button>
+                    <button className='btn_reset' onClick={handleReset}>Reset</button>
                 </div>
                 <span>{result}</span>
             </div>
