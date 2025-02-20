@@ -7,6 +7,10 @@ input[type="number"] {
     border-radius: 4px;
 }
 
-strong {
-    font-size: 20px;
+.select {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 12px 20px;
+    border-radius: 4px;
 }

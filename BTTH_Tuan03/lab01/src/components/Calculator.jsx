@@ -1,12 +1,13 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import "./Calculator.css";
 
 const Calculator = () => {
   const [num1, setNum1] = useState('');
   const [num2, setNum2] = useState('');
+  const [operator, setOperator] = useState('+'); 
   const [result, setResult] = useState(null);
 
-  const handleCalculation = (operator) => {
+  const handleCalculation = () => {
     const a = parseFloat(num1);
     const b = parseFloat(num2);
     let res;
@@ -36,8 +37,8 @@ const Calculator = () => {
   };
 
   return (
-    <div >
-      <h2>Máy tính đơn giản</h2>
+    <div>
+      <h2>Calculator</h2>
       <div>
         <input
           type="number"
@@ -54,12 +55,48 @@ const Calculator = () => {
           style={{ width: '120px' }}
         />
       </div>
-      <div style={{ marginTop: '10px' }}>
-        <button onClick={() => handleCalculation('+')}>+</button>
-        <button onClick={() => handleCalculation('-')}>-</button>
-        <button onClick={() => handleCalculation('*')}>*</button>
-        <button onClick={() => handleCalculation('/')}>/</button>
+
+     
+      <div className='select'>
+        <label>
+          <input
+            type="radio"
+            value="+"
+            checked={operator === "+"}
+            onChange={(e) => setOperator(e.target.value)}
+          />+
+        </label>
+        <label >
+          <input
+            type="radio"
+            value="-"
+            checked={operator === "-"}
+            onChange={(e) => setOperator(e.target.value)}
+          />-
+        </label>
+        <label >
+          <input
+            type="radio"
+            value="*"
+            checked={operator === "*"}
+            onChange={(e) => setOperator(e.target.value)}
+          />*
+        </label>
+        <label >
+          <input
+            type="radio"
+            value="/"
+            checked={operator === "/"}
+            onChange={(e) => setOperator(e.target.value)}
+          />/
+        </label>
       </div>
+
+
+      <div >
+        <button onClick={handleCalculation}>Tính toán</button>
+      </div>
+
       <div >
         <strong>Kết quả: </strong> {result}
       </div>
