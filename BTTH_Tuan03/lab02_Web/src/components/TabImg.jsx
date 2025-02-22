@@ -21,6 +21,8 @@ const data = [
 
 const TabImg = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [show, setShow] = useState(true);
+
     const nextImg = () => {
         setActiveIndex((prevIndex) =>
             prevIndex === data.length - 1 ? 0 : prevIndex + 1
@@ -28,6 +30,7 @@ const TabImg = () => {
     }
 
     return (
+        show &&
         <div className="tab">
             <h2>Discover Chefify</h2>
             <p>Easy and delicious cooking instructions right here. Start exploring now!</p>
@@ -60,15 +63,13 @@ const TabImg = () => {
             </div>
             <div className="btn">
                 <button className="btn-next active" onClick={nextImg}>Next</button>
-                <button className="btn-skip" onClick={onclose}>Skip</button>
+                <button className="btn-skip" onClick={() => setShow(false)}>Skip</button>
             </div>
-
+            <span className="icon-close" onClick={() => setShow(false)}>x</span>
         </div>
 
 
+    )
 
-
-
-    );
 };
 export default TabImg;

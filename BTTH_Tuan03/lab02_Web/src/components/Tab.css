@@ -9,6 +9,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 500px;
+    position: relative;
+}
+
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-close:hover {
+    transform: scale(1.2);
+    color: #e15d89;
 }
 
 h2 {
