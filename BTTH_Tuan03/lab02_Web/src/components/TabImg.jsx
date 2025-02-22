@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import food1 from "../assets/img/food1.jpg";
 import food2 from "../assets/img/food2.jpg";
 import food3 from "../assets/img/food3.jpeg";
@@ -28,6 +28,18 @@ const TabImg = () => {
             prevIndex === data.length - 1 ? 0 : prevIndex + 1
         );
     }
+
+    // Auto slider change
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prevIndex) =>
+                prevIndex === data.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 1000);
+        return () => clearInterval(interval);
+    }
+        , [activeIndex]
+    );
 
     return (
         show &&
