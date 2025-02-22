@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import food1 from "../assets/img/food1.jpg";
 import food2 from "../assets/img/food2.jpg";
 import food3 from "../assets/img/food3.jpeg";
@@ -31,12 +31,22 @@ const TabImg = () => {
         <div className="tab">
             <h2>Discover Chefify</h2>
             <p>Easy and delicious cooking instructions right here. Start exploring now!</p>
-            <div className="imgs">
-                <img
-                    src={data[activeIndex].img}
-                    alt={`food-${data[activeIndex].id}`}
-                    className="img"
-                />
+            <div className="img-slider">
+                {
+                    data.map((img, index) => (
+                        <div
+                            key={index}
+                            className="img-container"
+                        >
+                            <img
+                                src={img.img}
+                                alt="food"
+                                className={index === activeIndex ? "img active" : "img"}
+                                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                            />
+                        </div>
+                    ))
+                }
             </div>
 
             <div className="dots">
