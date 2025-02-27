@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="header__logo"><img src="./img/logo.png" alt=""></div>
+        <div class="header__menu">
+            <div class="header__menu--search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="input--search" type="text" placeholder="cakescascsa">
+            </div>
+            
+            <div class="header__menu--list">
+                <ul>
+                    <li><a href="">What to cook</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Ingredient</a></li>
+                    <li><a href="">Occasions</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__avt">
+            <button class="header__avt--btn">Your Recipe Box</button>
+            <img src="./img/avt.jpg" alt="">
+        </div>
+
+    </header>
+    <div class="content">
+        <div class="content__info">
+            <div class="content__info--filters">
+                <h1>Filters</h1>
+                <h2>Type</h2>
+                <div class="list--check">
+                    <div class="filters--column1">
+                        <div>
+                            <input type="checkbox" name="type" id="type1">
+                            <label for="type1">Breakfast</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                    </div>
+                    <div class="filters--column2">
+
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="type" id="type2">
+                            <label for="type2">Lunch</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="content__info--times">
+                <h1>Times</h1>
+                <div class="time-slider">
+                    <span>30 minutes</span>
+                    <input type="range" min="0" max="100" value="30">
+                    <input type="range" min="0" max="100" value="50">
+                    <span>50 minutes</span>
+                </div>
+            </div>
+            <div class="content__info--rating">
+                <h1>Rating</h1>
+                <div class="rating-slider">
+                    <input type="checkbox">
+                    <label for="list1"><span><i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                        </span></label>
+                </div>
+                <div class="rating-slider">
+                    <input type="checkbox">
+                    <label for="list2"><span><i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                        </span></label>
+                </div>
+                <div class="rating-slider">
+                    <input type="checkbox">
+                    <label for="list2"><span><i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                        </span></label>
+                </div>
+                <div class="rating-slider">
+                    <input type="checkbox">
+                    <label for="list2"><span><i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                        </span></label>
+                </div>
+                <div class="rating-slider">
+                    <input type="checkbox">
+                    <label for="list2"><span><i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                            <i class="fa-solid fa-star" style="color: #e7e4db;"></i>
+                        </span></label>
+                </div>
+
+
+
+            </div>
+            <div class="content__info--apply">
+                <button class="btn__apply">Apply</button>
+            </div>
+        </div>
+        <div class="content__task">
+            <div class="content__task--title">
+                <h1>Sorry, no results were found for "cakescascsa"</h1>
+            </div>
+            <img src="./img/cart.png" alt="">
+            <p>We have all your Independence Day sweets covered.</p>
+            <div class="btn--list">
+                <button class="btn1">Sweet Cake</button>
+                <button class="btn2">Black Cake</button>
+                <button class="btn3">Pozole Verde</button>
+                <button class="btn4">Healthy food</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

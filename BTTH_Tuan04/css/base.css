@@ -1,0 +1,22 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --pink-color: #ff6b81;
+    --gray--color: #e8e7e7;
+    --width-screen : 1200px;
+    --height-header: 60px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Crimson Text', sans-serif;
+    box-sizing: border-box;
+}
