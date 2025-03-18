@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --primary-color: #f1c40f;
+    --secondary-color: #2c3e50;
+    --tertiary-color: #ecf0f1;
+    --width-screen: 1200px;
+    --pink--color: #e06c93;
+}
+
+footer {
+    width: var(--width-screen);
+    height: var(--height-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.contact {
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.btn-text {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn-text:hover {
+    cursor: pointer;
+}
+
+.btn-send {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--pink--color);
+    color: white;
+    padding: 10px 20px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.learn-list,
+.recipes-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 0;
+
+    >li {
+        list-style: none;
+        opacity: 0.8;
+
+    }
+}
